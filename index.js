@@ -165,9 +165,12 @@ const firstOccur = (string_1, string_2) => {
 const searchInsert = (nums, target) => {
   if (nums.includes(target)) return nums.indexOf(target);
   if (!nums.includes(target)) {
-    if (nums.includes(target - 1)) return nums.indexOf(target - 1) + 1;
-    if (nums.includes(target + 1) && nums.indexOf(target + 1) === 0) return 0;
-    if (nums.includes(target + 1)) return nums.indexOf(target + 1) - 1;
+    if (target < nums[0]) return 0;
+    if (target > nums[nums.length - 1]) return nums.length;
+    for (let i = 1; i < nums.length - 1; i++) {
+      if (nums[i] > target) return i;
+    }
+    return nums.length - 1;
   }
 };
 
