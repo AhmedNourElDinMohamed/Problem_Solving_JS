@@ -155,7 +155,6 @@ const firstOccur = (string_1, string_2) => {
 };
 
 // console.log(firstOccur("sadbutsad", "sad"));
-// console.log(firstOccur("leetcode", "leeto"));
 
 // ************************************************** //
 
@@ -174,5 +173,14 @@ const searchInsert = (nums, target) => {
   }
 };
 
-console.log(searchInsert([3, 6, 7, 8, 10], 5));
-// console.log(firstOccur("leetcode", "leeto"));
+// console.log(searchInsert([3, 6, 7, 8, 10], 5));
+
+// | PROBLEM 10 | //
+// 58. Length of Last Word
+
+const lengthOfLastWord = (string) => {
+  const arrString = string.split(" ");
+  return arrString.filter((el) => el !== "").pop().length;
+};
+
+console.log(lengthOfLastWord("   fly me   to   the moon  "));
