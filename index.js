@@ -183,4 +183,15 @@ const lengthOfLastWord = (string) => {
   return arrString.filter((el) => el !== "").pop().length;
 };
 
-console.log(lengthOfLastWord("   fly me   to   the moon  "));
+// console.log(lengthOfLastWord("   fly me   to   the moon  "));
+
+// | PROBLEM 11 | //
+// 66. Plus One
+
+const plusOne = (digits) => {
+  const integers = digits.join("");
+  const increament = BigInt(integers) + BigInt(1);
+  return Array.from(String(increament), Number);
+};
+
+console.log(plusOne([6, 1, 4, 5, 3, 9, 0, 1, 9, 5, 1, 8, 6, 7, 0, 5, 5, 4, 3]));
