@@ -190,8 +190,21 @@ const lengthOfLastWord = (string) => {
 
 const plusOne = (digits) => {
   const integers = digits.join("");
-  const increament = BigInt(integers) + BigInt(1);
+  const increament = BigInt(integers) + BigInt;
   return Array.from(String(increament), Number);
 };
 
-console.log(plusOne([6, 1, 4, 5, 3, 9, 0, 1, 9, 5, 1, 8, 6, 7, 0, 5, 5, 4, 3]));
+// console.log(plusOne([6, 1, 4, 5, 3, 9, 0, 1, 9, 5, 1, 8, 6, 7, 0, 5, 5, 4, 3]));
+
+// | PROBLEM 12 | //
+// 67. Add Binary
+
+const addBinary = (a, b) => {
+  const decNum1 = BigInt(`0b${a}`);
+  const decNum2 = BigInt(`0b${b}`);
+
+  const sum = BigInt(decNum1 + decNum2);
+  return sum.toString(2);
+};
+
+console.log(addBinary("11", "1"));
